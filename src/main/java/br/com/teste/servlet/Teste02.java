@@ -14,19 +14,19 @@ import br.com.teste.service.ServicoNormal;
 import br.com.teste.service.ServicoSingleton;
 
 /**
- * Servlet implementation class Teste01
+ * Servlet implementation class Teste02
  */
-@WebServlet("/Teste01")
-public class Teste01 extends HttpServlet {
-       
-	private static final long serialVersionUID = 4977402519301431806L;
-	
+@WebServlet("/Teste02")
+public class Teste02 extends HttpServlet {
+	private static final long serialVersionUID = -8671290930442301071L;
+
 	@Inject
 	ServicoEJB ejb;
-
-	/** @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response) */
+	
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 //		ServicoNormal normal = new ServicoNormal();
 //		normal.processa(request.getRequestURI());
 		
@@ -35,7 +35,7 @@ public class Teste01 extends HttpServlet {
 		
 		ejb.processa(request.getRequestURI());
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath()).append(" Primeiro teste");
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
