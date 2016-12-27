@@ -37,7 +37,6 @@
 			<scope>provided</scope>
 		</dependency>
 
-
 	</dependencies>
 	<build>
 		<finalName>testeWebEjb</finalName>
@@ -49,15 +48,31 @@
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<webApp>
-						<contextPath>/test</contextPath>
+						<contextPath>/testeWebEjb</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>
 			<plugin>
-                <groupId>org.wildfly.plugins</groupId>
-                <artifactId>wildfly-maven-plugin</artifactId>
-                <version>1.1.0.Beta1</version>
-            </plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.1.0.Beta1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.openejb.maven</groupId>
+				<artifactId>tomee-maven-plugin</artifactId>
+				<version>1.7.1</version>
+				<configuration>
+					<tomeeVersion>1.7.1</tomeeVersion>
+					<tomeeClassifier>plus</tomeeClassifier>
+					<synchronization>
+						<extensions>
+							<extension>.class</extension> <!-- if you want to update each time you build with mvn compile -->
+							<extension>.jsp</extension>
+						</extensions>
+					</synchronization>
+					<reloadOnUpdate>true</reloadOnUpdate>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
