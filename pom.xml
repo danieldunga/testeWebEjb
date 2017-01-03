@@ -25,9 +25,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>javax.ejb</groupId>
-			<artifactId>ejb-api</artifactId>
-			<version>3.0</version>
+			<groupId>org.jboss.spec.javax.ejb</groupId>
+			<artifactId>jboss-ejb-api_3.1_spec</artifactId>
+			<version>1.0.2.Final</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -36,7 +36,6 @@
 			<version>1</version>
 			<scope>provided</scope>
 		</dependency>
-
 	</dependencies>
 	<build>
 		<finalName>testeWebEjb</finalName>
@@ -61,6 +60,18 @@
 				<groupId>org.apache.openejb.maven</groupId>
 				<artifactId>tomee-maven-plugin</artifactId>
 				<version>1.7.1</version>
+				<dependencies>
+					<dependency>
+						<groupId>com.h2database</groupId>
+						<artifactId>h2</artifactId>
+						<version>1.4.193</version>
+					</dependency>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>6.0.5</version>
+					</dependency>
+				</dependencies>
 				<configuration>
 					<tomeeVersion>1.7.1</tomeeVersion>
 					<tomeeClassifier>plus</tomeeClassifier>
