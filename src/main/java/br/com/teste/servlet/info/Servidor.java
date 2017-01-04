@@ -1,4 +1,4 @@
-package br.com.teste.servlet;
+package br.com.teste.servlet.info;
 
 import java.io.IOException;
 

@@ -81,6 +81,12 @@ public class ConfigurarAmbienteServlet extends HttpServlet {
 			e.printStackTrace();
 			System.out.println("########## ERRO --- " + e.getMessage());
 		}
+		
+		// Inicializa propriedades com as variáveis do servidor
+//		for (Entry<String, String> entry : System.getenv().entrySet()) {
+//			System.setProperty(entry.getKey(), entry.getValue());
+//		}
+		
 		super.init();
 	}
 

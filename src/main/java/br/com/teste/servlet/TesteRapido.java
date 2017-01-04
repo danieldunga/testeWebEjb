@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 /**
  * Servlet implementation class TesteRapido
  */
@@ -15,6 +17,8 @@ import javax.servlet.http.HttpServletResponse;
 public class TesteRapido extends HttpServlet {
     /** serialVersionUID */
 	private static final long serialVersionUID = -3348753855500489975L;
+	
+	Logger log = Logger.getLogger(getClass());
 
 	
 	public TesteRapido() {
@@ -27,6 +31,7 @@ public class TesteRapido extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String msg = "OK";
 		
+		log.error("AAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC");
 		
 		response.getWriter().append(msg);
 	}
