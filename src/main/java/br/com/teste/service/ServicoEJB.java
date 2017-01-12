@@ -2,8 +2,12 @@ package br.com.teste.service;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
+import javax.interceptor.Interceptors;
+
+import br.com.teste.interceptador.Tempo;
 
 @Stateless
+@Interceptors({Tempo.class})
 public class ServicoEJB {
 
 	@PostConstruct
