@@ -22,6 +22,6 @@ public class ServicoEJB {
 			System.out.println("criado " + string);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
-		} 
+		}
 	}
 }

@@ -19,9 +19,9 @@ public class ServicoSingleton {
 	
 	public void processa(String string) {
 		try {
-			System.out.println("criando " + string);
+			System.out.println("inicio " + string);
 			Thread.sleep(20000); //20s
-			System.out.println("criado " + string);
+			System.out.println("- fim " + string);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} 
